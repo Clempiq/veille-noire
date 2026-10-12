@@ -1,0 +1,9 @@
+tests/
+README.md
+ART-DIRECTION.md
+server.mjs
+*.zip
+assets/*.png
+
+*.cmd
+deploy-log.txt
