@@ -92,3 +92,11 @@ Le détail des changements, les références officielles consultées, les mesure
 ## Prise en main V1.7.1
 
 L’action Viser et son raccourci ont été retirés. Le premier tir de Sacha reçoit automatiquement un seuil réduit de 1 à chaque manche (minimum 2+). Les anciennes sauvegardes restent lisibles ; leur ancien bonus de visée ne s’applique plus. Le résumé « Les règles en 2 minutes » est disponible dans Règles, au premier lancement, dans le briefing et dans le salon en ligne.
+
+## Langues
+
+Le jeu est écrit en français et existe aussi en anglais. La langue suit celle du navigateur (anglais si elle n'est pas le français), se change avec le bouton « English » / « Français » de l'accueil ou du menu Pause, et peut être forcée par lien avec `?lang=en` ou `?lang=fr`.
+
+- `i18n.js` traduit l'affichage à la volée : le moteur, le serveur et les sauvegardes restent en français.
+- `i18n-en.js` contient le dictionnaire français → anglais. `{}` y représente une valeur variable.
+- Après l'ajout d'un texte en français, ouvrir le jeu avec `?lang=en` puis taper `vnI18n.missing()` dans la console liste les textes affichés restés sans traduction.

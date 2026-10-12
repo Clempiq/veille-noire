@@ -39,3 +39,8 @@
 .portrait.p12{background-position:0 0}
 .portrait.p13{background-position:100% 0}
 .portrait.p14{background-position:0 100%}
+
+/* Choix de la langue : dans l'en-tête sur grand écran, sous l'accroche sur téléphone */
+.lang-toggle .lang-short{display:none}
+.home-features .lang-mobile{display:none}
+@media (max-width:640px){.lang-desktop{display:none!important}.home-features .lang-mobile{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid currentColor;border-radius:999px;font:inherit;color:inherit;background:transparent;cursor:pointer;opacity:.85}}
