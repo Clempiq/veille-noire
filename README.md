@@ -1,8 +1,42 @@
-# Veille Noire — Les derniers de Nacre
+# Veille Noire : Les derniers de Nacre
+
+> Un jeu de plateau tactique et coopératif de survie, original et en français, jouable dans le navigateur, seul ou à plusieurs.
+
+**Jouer :** [veille-noire.vercel.app](https://veille-noire.vercel.app) (V1.7.1)
+
+## Le problème
+
+Les jeux de plateau coopératifs de survie demandent du matériel, de la place et une longue mise en place, et ne se jouent pas à distance. Les adaptations numériques existantes sont souvent payantes, en anglais, ou réservées à l'ordinateur.
+
+**Pour qui :** les amateurs de jeux de plateau tactiques qui veulent une partie complète en solo, en coopération sur le même écran ou chacun sur son téléphone, sans compte ni installation.
+
+## Stack
+
+| Catégorie | Technologie |
+|---|---|
+| Front | JavaScript natif (modules ES), HTML, CSS, sans framework ni dépendance |
+| Moteur | Règles et transitions d'état déterministes, indépendantes de l'interface (`engine.js`) |
+| Multijoueur | Fonction serverless Vercel (`api/party.js`) et stockage Redis (Upstash) |
+| Tests | 129 tests avec le module de tests natif de Node.js, essais navigateur |
+| Déploiement | Vercel |
+
+## Statut
+
+✅ **Jouable en ligne, en version 1.7.1.** 9 missions, 15 survivants, coopération en ligne de 2 à 4 joueurs, français et anglais. Reste à faire : un équilibrage statistique exhaustif.
+
+## Ce que j'ai appris
+
+- **Gérer un produit par versions** : chaque version (V1.6 équilibrage, V1.7 prise en main) a un objectif clair, des notes de version et la compatibilité des anciennes sauvegardes.
+- **Simplifier la prise en main** : résumé « Les règles en 2 minutes », retrait d'une action peu utilisée, règles intégrées au jeu.
+- **Séparer les règles de l'interface** pour pouvoir tester le moteur à fond et le réutiliser côté serveur en multijoueur.
+- **Concevoir un multijoueur au tour par tour** : salons, droits des joueurs, fin de tour commune, reprise après rechargement, commandes dédupliquées.
+- **Rester original** : aucun visuel, personnage ni texte de règle d'une franchise existante.
+
+## Présentation détaillée
 
 Jeu de plateau tactique original en français, jouable dans le navigateur.
 
-Version publique actuelle : https://veille-noire.vercel.app — V1.7.1, mise à jour du 11 octobre 2026. Solo ou coopération locale sur le même écran, avec 2 à 4 survivants ; coopération en ligne de 2 à 4 joueurs, un personnage par appareil. Aucun compte joueur nécessaire. Les salons utilisent une API Vercel et un stockage Upstash gratuit, avec passage automatique au payant désactivé.
+Version publique actuelle : https://veille-noire.vercel.app (V1.7.1, mise à jour du 11 octobre 2026). Solo ou coopération locale sur le même écran, avec 2 à 4 survivants ; coopération en ligne de 2 à 4 joueurs, un personnage par appareil. Aucun compte joueur nécessaire. Les salons utilisent une API Vercel et un stockage Upstash gratuit, avec passage automatique au payant désactivé.
 
 ## Jouer
 
